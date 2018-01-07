@@ -1,0 +1,41 @@
+/* .App {
+  text-align: center;
+} */
+/* body{
+  background-image: url("images/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+} */
+
+/* .loginCont{
+  background-color: #e6e6e6
+}*/
+
+ .forBorder{
+  border: 2px solid #3d107b;
+} 
+.forMainheading{
+  color: white
+}
+.gBtnColor{
+  border: 1px solid black
+}
+.forText{
+  font-size: 20px
+}
+.forgoogleColor{
+  background-color: red;
+  color:white;
+  width:50px;
+  height: 50px;
+
+}
+.forfbColor{
+  background-color: #4267B2;
+  color:white;
+  width:50px;
+  height: 50px;
+}
+
+
+
