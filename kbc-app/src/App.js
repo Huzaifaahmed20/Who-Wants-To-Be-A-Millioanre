@@ -6,9 +6,8 @@ import {
 } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 // import firebase from 'firebase'
-import Signup from './myComponents/Signup';
+
 import Mainpage from './myComponents/Mainpage';
-import login from './myComponents/login';
 import SignUpOrLogin from './myComponents/SignUpOrLogin';
 import Dashboard from './myComponents/Dashboard';
 const customHistory = createBrowserHistory()

@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom'
 import '../App.css'
 import swal from 'sweetalert'
 import firebase from 'firebase'
 import 'firebase/database'
-import { StaticRouter } from 'react-router'
-import Dashboard from './Dashboard';
-// import { provider } from 'firebase'
 class SignUpOrLogin extends Component {
     constructor(props) {
         super(props)
@@ -101,7 +97,7 @@ class SignUpOrLogin extends Component {
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider).then(function (result) {
             // This gives you a Google Access Token. You can use it to access the Google API.
-            var token = result.credential.accessToken;
+            // var token = result.credential.accessToken;
             // The signed-in user info.
             var user = result.user;
             localStorage.setItem('GoogleUser', JSON.stringify(user));
@@ -109,26 +105,36 @@ class SignUpOrLogin extends Component {
             window.location = "/Dashboard";
         }).catch(function (error) {
             // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
+            // var errorCode = error.code;
+            // var errorMessage = error.message;
             // The email of the user's account used.
-            var email = error.email;
+            // var email = error.email;
             // The firebase.auth.AuthCredential type that was used.
-            var credential = error.credential;
-            // ...
+            // var credential = error.credential;
+                swal({
+                    title: "OOPPS!!",
+                    text: error.message,
+                    icon: "error",
+                })
+          
         });
     }
     fbSignIn() {
         var provider = new firebase.auth.FacebookAuthProvider();
         firebase.auth().signInWithPopup(provider)
             .then(function (result) {
-                var token = result.credential.accessToken;
+                // var token = result.credential.accessToken;
                 var user = result.user;
                 localStorage.setItem('FBUser', JSON.stringify(user));
                 window.location = "/Dashboard";
             }).catch(function (error) {
                 console.log(error.code);
                 console.log(error.message);
+                swal({
+                    title: "OOPPS!!",
+                    text: error.message,
+                    icon: "error",
+                })
             });
     }
 
